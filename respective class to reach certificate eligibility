@@ -1,0 +1,30 @@
+/* Create a table called "students" with columns "id" (integer, primary key, auto-increment), "name" (text), "age" (integer), and "gender" (text).
+
+Insert three rows of data into the "students" table.
+Retrieve all rows from the "students" table.
+Update the name of the student with id = 2 to "Janet".
+Delete the row with id = 3 from the "students" table.
+Retrieve all rows from the "students" table again to verify that the changes have been made. */
+
+
+
+CREATE TABLE students (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT,
+  age INTEGER,
+  gender TEXT
+);
+
+INSERT INTO students (name, age, gender) VALUES
+  ('John', 20, 'Male'),
+  ('Mary', 19, 'Female'),
+  ('Bob', 21, 'Male');
+
+SELECT * FROM students;
+
+UPDATE students SET name = 'Janet' WHERE id = 2;
+
+DELETE FROM students WHERE id = 3;
+
+SELECT * FROM students;
+
